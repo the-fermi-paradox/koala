@@ -629,7 +629,7 @@ koala::interpreter::symbol* koala::interpreter::search_symbol(koala::expression*
 
             if (struct_sym->v->get_class() != TP_STRUCT) {
                 printf("Symbol \'%s\' does not refer to a struct type object\n",
-                    struct_sym->name
+                    struct_sym->name.c_str()
                 );
 
                 std::exit(1);
@@ -654,7 +654,7 @@ koala::interpreter::symbol* koala::interpreter::search_symbol(koala::expression*
     }
 
     if (!sym) {
-        printf("Could not find a symbol in expression \'%s\'\n", expr->print(0));
+        printf("Could not find a symbol in expression \'%s\'\n", expr->print(0).c_str());
 
         std::exit(1);
     }
