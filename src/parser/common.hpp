@@ -8,6 +8,6 @@ namespace koala {
     struct variable_info {
         std::string name;
 
-        type* type;
+        class type* type;
     };
 }
