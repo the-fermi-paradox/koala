@@ -355,7 +355,6 @@ void koala::lexer::lex() {
         if (lex_string()) goto lexed;
         if (iseof(m_c)) goto lexed;
 
-        printf("%d\n", m_c);
         printf("Unknown token at line %u col %u\n",
             m_output.back().loc.row + 1,
             m_output.back().loc.column + 1
